@@ -32,7 +32,7 @@ Author
 
 Our directory contains only a content : 1.codes to build compressed de bruijn graph.
 
-THe directory named #src# consisted of the code necessary to build the StLiter.
+The directory named #src# consisted of the code necessary to build the StLiter.
 To build the StLiter, change the directory to src and type
 
 	$ make
