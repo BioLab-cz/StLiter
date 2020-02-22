@@ -1,5 +1,5 @@
 # StLiter 81.20.0101
-==
+
 Release Date: 21th February, 2020
 
 Author
@@ -223,8 +223,7 @@ The format of a parameter of StLiter in the command line is a pair of strings, h
 		~the position list of each edge is saved in three parts 
 		1)first r Bytes as a (k+1)-mer, 
 		2)the next 8 Bytes as the length of the list and 
-		3) the positions, each position of which is saved in 8 Bytes. 
-		where r=8*([(kmer_len+1)/32]+sign((kmer_len+1)/32)). The position lists of all edges are saved one by one. 	
+		3) the positions, each position of which is saved in 8 Bytes. where r=8*([(kmer_len+1)/32]+sign((kmer_len+1)/32)). The position lists of all edges are saved one by one. 	
 
 7.License
 --
