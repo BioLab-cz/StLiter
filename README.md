@@ -1,5 +1,5 @@
 # StLiter 81.20.0101
-
+==
 Release Date: 21th February, 2020
 
 Author
@@ -8,6 +8,7 @@ Author
 	~Chu Zhao (Northeastern University in CHINA)
 
 1.Introduction
+--
 
   StLiter is a tool，it can construct the compressed de bruijn graph (cDBG) of one genome or multiple genomes. The built graph can represent the genomes and index them in the data analysis such as large-scale read mapping.
 
@@ -22,10 +23,12 @@ Author
   Overall, StLiter can effectively construct cDBG for multiple large-scale genomes for read mapping. We believe that the tool will improve the performance of data analysis with the bottleneck of large-scale data.
 
 2.Test Data
+--
 
   StLiter constructs compressed de bruijn graph of genome sequences. The genome sequences are .fa format, and we tested StLiter with the genome sequences used in paper "TwoPaCo: An efficient algorithm to build the compressed de Bruijn graph from many complete genomes". we download the data using website: https://github.com/medvedevgroup/TwoPaCo.
 
 3.Building Notes
+--
 
 Our directory contains only a content : 1.codes to build compressed de bruijn graph.
 
@@ -37,6 +40,7 @@ To build the StLiter, change the directory to src and type
 After that, you can type commands to run tests using StLiter. StLiter provides 5 methods for building  compressed de bruijn graph of large-scale genomes.
 
 4.Usage Notes
+--
 
 1)B method. Generate branching k-mers of the cDBG with short k-mer length.
 
@@ -123,6 +127,7 @@ Running test:
   The above commonds calculate the unipaths and position lists.
 
 5.Parameter Settings
+--
 
 The format of a parameter of StLiter in the command line is a pair of strings, here we denote the pair as (-p, [q]) or (-p,<q>). String p is the name of the parameter. String q is the value of the parameter input in the command line. [q] represents that the parameter is a optional parameter. <q> represents that the parameter is a necessary parameter.
 
@@ -184,6 +189,7 @@ The format of a parameter of StLiter in the command line is a pair of strings, h
 
 
 6.Format of cDBG
+--
 
 	-kmerxxxin
 	-kmerxxxout
@@ -214,13 +220,19 @@ The format of a parameter of StLiter in the command line is a pair of strings, h
 	-poslistxxx
 		~binary file of position lists
 		~xxx is the k-mer length
-		~the position list of each edge is saved in three parts 1)first r Bytes as a (k+1)-mer, 2)the next 8 Bytes as the length of the list and 3) the positions, each position of which is saved in 8 Bytes. where r=8*([(kmer_len+1)/32]+sign((kmer_len+1)/32)). The position lists of all edges are saved one by one. 	
+		~the position list of each edge is saved in three parts 
+		1)first r Bytes as a (k+1)-mer, 
+		2)the next 8 Bytes as the length of the list and 
+		3) the positions, each position of which is saved in 8 Bytes. 
+		where r=8*([(kmer_len+1)/32]+sign((kmer_len+1)/32)). The position lists of all edges are saved one by one. 	
 
 7.License
+--
 
 	See LICENSE.txt
 
 8.Contacts
+--
 
 	Please e-mail your feedback at cyyneu@126.com.
 
